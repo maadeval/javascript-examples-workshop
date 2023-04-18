@@ -1,0 +1,17 @@
+{
+  "name": "javascript-examples",
+  "version": "1.0.0",
+  "workspaces": [
+    "workshop/*"
+  ],
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "day-1:ej-1": "npm run 1 --workspace=workshop/day-1",
+    "day-1:ej-2": "npm run 2 --workspace=workshop/day-1",
+    "day-1:retos": "npm run retos --workspace=workshop/day-1"
+  },
+  "keywords": [],
+  "author": "@madeval",
+  "license": "ISC"
+}
