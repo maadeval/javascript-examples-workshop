@@ -1,0 +1,14 @@
+{
+  "name": "day-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "1": "node ej-1.js",
+    "test": "node --watch ej-1.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
