@@ -5,16 +5,16 @@ const getName = () => {
   let name = 'Next';
 };
 
+getName();
+
 /* 
 ✅ Respuestas:
 - [] undefined
 - [] 'Astro'
-- [] ReferenceError
+- [X] ReferenceError
 - [] 'Astro' 'Next'
 - [] 'Next'
 */
-
-// getName()
 
 // --------
 
@@ -28,8 +28,8 @@ function sorterByMayor({ list }) {
 
 /* 
 ✅ Respuestas:
-- [] [1,2,3,4,6,6,14]
+- [X] [1,2,3,4,6,6,14]
 - [] [14,6,6,4,3,2,1]
 - [] ReferenceError
-- [] [1,14,4,6,3,2,6]
+- [] [1,14,2,3,4,6,6]
 */

@@ -1,3 +1,5 @@
+// deberes para hacer chavales!! 💪
+
 function getEl(list, index) {
   if (list) {
     if (index !== undefined && index !== null) {

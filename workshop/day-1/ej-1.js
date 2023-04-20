@@ -29,9 +29,9 @@ function calcularResultado(usuario) {
 }
 
 const results = calcularResultado({
-  edad: 20,
-  esPremium: false,
-  historialCompras: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+  esPremium: true,
+  historialCompras: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  edad: 18,
 });
 
 console.log({ results });
