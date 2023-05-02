@@ -1,0 +1,12 @@
+.form {
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .125rem;
+}
