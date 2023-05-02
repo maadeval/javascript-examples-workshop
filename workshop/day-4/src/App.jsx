@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { TodoForm } from './components/todo-list/TodoForm/TodoForm'
 import { useTodoForm } from './hooks/useTodoForm'
 import { useTodoList } from './hooks/useTodoList'
 
@@ -71,28 +72,6 @@ function App() {
         )}
       </section>
     </>
-  )
-}
-
-const TodoForm = ({
-  handleSubmitForm,
-  handleResetForm,
-  handleInputChange,
-  value,
-  error,
-}) => {
-  return (
-    <form onSubmit={handleSubmitForm}>
-      <label>
-        Escriba un nuevo item:
-        <input autoFocus value={value} onChange={handleInputChange} />
-        {error && <span>{error}</span>}
-      </label>
-      <button type='submit'>Guardar Item</button>
-      <button type='button' onClick={handleResetForm}>
-        Limpiar formulario
-      </button>
-    </form>
   )
 }
 
