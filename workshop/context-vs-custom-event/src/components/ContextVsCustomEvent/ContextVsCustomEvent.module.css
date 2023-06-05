@@ -1,3 +1,9 @@
+.secondTitle {
+  font-size: 2rem;
+  color: #57534e;
+  text-align: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -46,8 +52,94 @@
   background-color: #fafaf9;
   color: #57534e;
   transition: filter .125s ease;
+  cursor: pointer;
 }
 
 .button:hover {
   filter: brightness(.9);
+}
+
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  border-radius: .5rem;
+  background-color: #17171710;
+  overflow: hidden;
+}
+
+.cardFigure {
+  overflow: hidden;
+  padding: 1rem;
+  height: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 1/1;
+  transition: transform .25s ease;
+}
+
+.cardImage:hover {
+  transform: scale(1.1);
+}
+
+.cardInfo {
+  background-color: #fafaf980;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #57534e;
+}
+
+.counterBox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.counter {
+  padding: .5rem 1rem;
+  border: none;
+  background-color: #fafaf9;
+  color: #57534e;
+}
+
+.counter:first-child,
+.counter:last-child {
+  cursor: pointer;
+  filter: brightness(.9);
+}
+
+.counter:first-child {
+  border-radius: .25rem 0 0 .25rem
+}
+
+.counter:last-child {
+  border-radius: 0 .25rem .25rem 0;
+}
+
+.counter:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.counterNum {
+  font-size: .85rem;
+  width: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
