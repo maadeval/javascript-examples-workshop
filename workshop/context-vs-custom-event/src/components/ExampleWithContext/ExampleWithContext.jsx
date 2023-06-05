@@ -1,60 +1,45 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { AlertContext } from '../../context/AlertProvider'
+import { ProductCardWithContext } from '../ProductCardWithContext/ProductCardWithContext'
+import { CancelIcon } from '../icons/CancelIcon'
+import { CheckIcon } from '../icons/CheckIcon'
 import style from './ExampleWithContext.module.css'
 
 export const ExampleWithContext = () => {
-  const [count, setCount] = useState(MIN_COUNT)
-
-  const handleLessCount = () => {
-    if (count === MIN_COUNT) return
-    setCount(count - 1)
-  }
-
-  const handleMoreCount = () => {
-    if (count === MAX_COUNT) return
-    setCount(count + 1)
-  }
+  const { setContentMessage } = useContext(AlertContext)
 
   return (
     <>
       <section className={style.blocksContainer}>
         <article className={style.block}>
           <h3 className={style.secondTitle}>🦖 Con Context</h3>
-          <article className={style.cardBox}>
-            <figure className={style.cardFigure}>
-              <img
-                className={style.cardImage}
-                src='https://edge-mug.vercel.app/_next/image?url=%2Fmug.png&w=3840&q=75'
-              />
-            </figure>
-            <footer className={style.cardInfo}>
-              <h4 className={style.cardTitle}>Vercel Cup</h4>
-              <div className={style.counterBox}>
-                <button
-                  className={style.counter}
-                  disabled={count === MIN_COUNT}
-                  onClick={handleLessCount}
-                >
-                  -
-                </button>
-                <span className={`${style.counter} ${style.counterNum}`}>
-                  {count}
-                </span>
-                <button
-                  className={style.counter}
-                  disabled={count === MAX_COUNT}
-                  onClick={handleMoreCount}
-                >
-                  +
-                </button>
-              </div>
-            </footer>
-          </article>
-          <button className={style.button}>Generar alerta</button>
+          <ProductCardWithContext />
+          <button
+            onClick={() => setContentMessage(<h3>Alert generated! 🚀</h3>)}
+            className={style.button}
+          >
+            Generar alerta
+          </button>
+          <div className={style.ventageBlock}>
+            <CheckIcon
+              style={{ display: 'block' }}
+              height={'1.5rem'}
+              color='green'
+            />
+            <p>Permite tener estados globales compartidos.</p>
+          </div>
+          <div className={style.ventageBlock}>
+            <CancelIcon
+              style={{ display: 'block' }}
+              height='1.5rem'
+              color='red'
+            />
+            <p>
+              Se renderizan muchos componentes que no utilizan este contexto.
+            </p>
+          </div>
         </article>
       </section>
     </>
   )
 }
-
-const MIN_COUNT = 0
-const MAX_COUNT = 10

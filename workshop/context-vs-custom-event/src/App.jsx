@@ -1,10 +1,14 @@
 import { ContextVsCustomEvent } from './components/ContextVsCustomEvent/ContextVsCustomEvent'
+import { AlertProvider } from './context/AlertProvider'
+import { ProductProvider } from './context/ProductProvider'
 
 function App() {
   return (
-    <>
-      <ContextVsCustomEvent />
-    </>
+    <AlertProvider>
+      <ProductProvider>
+        <ContextVsCustomEvent />
+      </ProductProvider>
+    </AlertProvider>
   )
 }
 

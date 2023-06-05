@@ -1,0 +1,87 @@
+.widget {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.125);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardFigure {
+  overflow: hidden;
+  padding: 1rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  height: 3rem;
+  aspect-ratio: 1/1;
+  transition: transform .25s ease;
+}
+
+.cardImage:hover {
+  transform: scale(1.1);
+}
+
+.cardInfo {
+  background-color: #fafaf980;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #57534e;
+}
+
+.counterBox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.counter {
+  padding: .5rem 1rem;
+  border: none;
+  background-color: #fafaf9;
+  color: #57534e;
+}
+
+.counter:first-child,
+.counter:last-child {
+  cursor: pointer;
+  filter: brightness(.9);
+}
+
+.counter:first-child {
+  border-radius: .25rem 0 0 .25rem
+}
+
+.counter:last-child {
+  border-radius: 0 .25rem .25rem 0;
+}
+
+.counter:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.counterNum {
+  font-size: .85rem;
+  width: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
