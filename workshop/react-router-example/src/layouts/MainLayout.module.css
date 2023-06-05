@@ -1,0 +1,23 @@
+.navbarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navItem {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #eaeaea;
+}
+
+.active {
+  background-color: #eaeaea40;
+}
+
+.mainContent {
+  margin: 1rem;
+  background-color: #eaeaea05;
+  padding: 2rem 4rem;
+  border-radius: .5rem;
+}
