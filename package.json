@@ -12,7 +12,8 @@
     "day-1:retos": "npm run retos --workspace=workshop/day-1",
     "day-2:ej-1": "npm run 1 --workspace=workshop/day-2",
     "day-2:ej-1:test": "npm run test --workspace=workshop/day-2",
-    "react-router:dev": "npm run dev --workspace=workshop/react-router-example"
+    "react-router:dev": "npm run dev --workspace=workshop/react-router-example",
+    "context-vs-ce:dev": "npm run dev --workspace=workshop/context-vs-custom-event"
   },
   "keywords": [
     "react",
